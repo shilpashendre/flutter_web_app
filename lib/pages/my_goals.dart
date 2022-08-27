@@ -50,10 +50,37 @@ class _MyGoalsState extends State<MyGoals> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10))),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: SvgPicture.asset(
-                              widget.goalList[index].imagePath,
-                              color: Colors.white,
+                            padding: const EdgeInsets.only(right: 18.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        (widget.goalList[index].percentage *
+                                                    100)
+                                                .toString() +
+                                            "%",
+                                        style: const TextStyle(
+                                            fontSize: 30,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Text(
+                                        widget.goalList[index].goalTimeLeft,
+                                        style: const TextStyle(
+                                          color: Color(0xFFA6A6A6),
+                                          fontSize: 14,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ))),
@@ -141,7 +168,7 @@ class _MyGoalsState extends State<MyGoals> {
                                                       horizontal: 8.0),
                                               child: Text(
                                                 widget.goalList[index]
-                                                    .valuePerWeel,
+                                                    .goalTimeLeft,
                                                 style: const TextStyle(
                                                     fontSize: 12,
                                                     color: pinkText,

@@ -34,24 +34,24 @@ class _DashBoardPageState extends State<DashBoardPage> {
     GoalData(
         value: "8000",
         imagePath: Images.pngRunning,
-        goalTime: "",
+        goalProgress: "36 km / week",
         goalTitle: "Bicycle",
         percentage: 0.5,
-        valuePerWeel: "3 days left"),
+        goalTimeLeft: "3 days left"),
     GoalData(
         value: "8000",
         imagePath: Images.pngRunning,
-        goalTime: "",
+        goalProgress: "",
         goalTitle: "Jogging",
         percentage: 0.3,
-        valuePerWeel: "2 days left"),
+        goalTimeLeft: "2 days left"),
     GoalData(
         value: "8000",
         imagePath: Images.svgGoals,
-        goalTime: "",
+        goalProgress: "",
         goalTitle: "My Goal",
         percentage: 0.8,
-        valuePerWeel: "4 days left"),
+        goalTimeLeft: "4 days left"),
   ];
 
   @override
@@ -61,7 +61,18 @@ class _DashBoardPageState extends State<DashBoardPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(child: ActivityFeed(dashboardMenu: dashboardMenu)),
-          Expanded(child: MyGoals(goalList: goalList))
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                    child: Container(
+                        color: Colors.red, child: MyGoals(goalList: goalList))),
+                // Expanded(
+                //     child: Container(
+                //         color: Colors.red, child: MyGoals(goalList: goalList))),
+              ],
+            ),
+          )
         ]);
   }
 }

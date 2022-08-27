@@ -2,16 +2,16 @@ class GoalData {
   final String goalTitle;
   final double percentage;
   final String imagePath;
-  final String goalTime;
+  final String goalProgress;
   final String value;
-  final String valuePerWeel;
+  final String goalTimeLeft;
   GoalData(
       {required this.goalTitle,
       required this.value,
       required this.imagePath,
       required this.percentage,
-      required this.goalTime,
-      required this.valuePerWeel});
+      required this.goalProgress,
+      required this.goalTimeLeft});
 
   @override
   String toString() {
