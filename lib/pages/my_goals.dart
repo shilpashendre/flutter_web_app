@@ -26,10 +26,10 @@ class _MyGoalsState extends State<MyGoals> {
           ),
           backgroundColor: Colors.white,
           elevation: 0,
-          centerTitle: true,
+          centerTitle: false,
           title: const Text(
             "My Goals",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
         body: Container(

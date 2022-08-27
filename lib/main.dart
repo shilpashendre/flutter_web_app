@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
           iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: scafoldBgColor,
           elevation: 0,
-          centerTitle: true,
+          centerTitle: false,
           title: const Text(
             "Dashboard menu",
-            style: TextStyle(color: Colors.red),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
         drawer: const MenuDrawer(),

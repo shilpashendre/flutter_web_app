@@ -67,10 +67,10 @@ class _CaloriesState extends State<Calories> {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-        centerTitle: true,
+        centerTitle: false,
         title: const Text(
           "Calories",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
       body: Container(

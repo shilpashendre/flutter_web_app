@@ -37,10 +37,10 @@ class _TraineesState extends State<Trainees> {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-        centerTitle: true,
+        centerTitle: false,
         title: const Text(
           "Your Trainers",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
       body: Container(
