@@ -2,6 +2,7 @@ import 'package:fitness_web_app/constants/images.dart';
 import 'package:fitness_web_app/models/drawer_menu_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class MenuDrawer extends StatefulWidget {
   const MenuDrawer({Key? key}) : super(key: key);
@@ -19,6 +20,12 @@ class _MenuDrawerState extends State<MenuDrawer> {
     DrawerMenuItem(title: "Goals", imagePath: Images.svgGoals),
     DrawerMenuItem(title: "Workout", imagePath: Images.svgWorkout)
   ];
+  final List<ChartData> chartData = [
+    ChartData('David', 25),
+    ChartData('Steve', 38),
+    ChartData('Jack', 34),
+    ChartData('Others', 52)
+  ];
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -29,12 +36,17 @@ class _MenuDrawerState extends State<MenuDrawer> {
               padding: EdgeInsets.zero,
               shrinkWrap: true,
               children: [
-                const DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                  ),
-                  child: Text('Drawer Header'),
-                ),
+                DrawerHeader(
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: SfCircularChart(series: <CircularSeries>[
+                      // Renders radial bar chart
+                      RadialBarSeries<ChartData, String>(
+                          dataSource: chartData,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y)
+                    ])),
                 Wrap(children: [
                   SizedBox(
                     height: double.maxFinite,
@@ -62,4 +74,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
       ),
     );
   }
+}
+
+class ChartData {
+  ChartData(this.x, this.y);
+  final String x;
+  final double y;
 }

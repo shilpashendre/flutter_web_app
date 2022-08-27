@@ -25,6 +25,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
         drawer: const MenuDrawer(),
-        body: const DashBoardPage(title: "title"));
+        body: const DashBoardPage());
   }
 }

@@ -9,9 +9,7 @@ import 'package:fitness_web_app/widgets/activity_feed.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardPage extends StatefulWidget {
-  const DashBoardPage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const DashBoardPage({Key? key}) : super(key: key);
 
   @override
   State<DashBoardPage> createState() => _DashBoardPageState();
