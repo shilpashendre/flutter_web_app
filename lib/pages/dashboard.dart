@@ -1,6 +1,7 @@
 import 'package:fitness_web_app/constants/images.dart';
 import 'package:fitness_web_app/models/dash_board_header_menu.dart';
 import 'package:fitness_web_app/models/goal_data.dart';
+import 'package:fitness_web_app/pages/calories.dart';
 import 'package:fitness_web_app/pages/daily_activity.dart';
 import 'package:fitness_web_app/pages/my_goals.dart';
 import 'package:fitness_web_app/pages/trainees.dart';
@@ -92,7 +93,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
                 Expanded(
                     flex: 1,
                     child: Container(
-                        color: Colors.red, child: MyGoals(goalList: goalList))),
+                        color: Colors.white, child: const Calories())),
               ],
             ),
           )

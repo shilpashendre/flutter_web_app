@@ -49,7 +49,7 @@ class _RowItemState extends State<RowItem> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SvgPicture.asset(
-                      Images.svgCoach1,
+                     widget.imagePath,
                     ),
                   ),
                 ),
