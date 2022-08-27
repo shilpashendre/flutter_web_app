@@ -63,10 +63,7 @@ class _MyGoalsState extends State<MyGoals> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          (widget.goalList[index].percentage *
-                                                      100)
-                                                  .toString() +
-                                              "%",
+                                          "${widget.goalList[index].percentage * 100}%",
                                           style: const TextStyle(
                                               fontSize: 30,
                                               color: Colors.black,

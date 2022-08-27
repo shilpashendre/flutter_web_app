@@ -63,10 +63,3 @@ class ChartData {
   final double y;
   final Color color;
 }
-
-class SalesData {
-  SalesData(this.year, this.sales);
-
-  final String year;
-  final double sales;
-}

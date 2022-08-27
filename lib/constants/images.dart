@@ -6,6 +6,7 @@ class Images {
   static const String svgSleep = "assets/images/svg/sleep.svg";
   static const String svgGoals = "assets/images/svg/goals.svg";
   static const String svgWorkout = "assets/images/svg/workout.svg";
+  static const String svgCoach1 = "assets/images/svg/coach1.svg";
 
   // dashboard
   static const String pngRunning = "assets/images/svg/running.png";
