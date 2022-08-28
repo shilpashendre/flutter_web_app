@@ -66,19 +66,16 @@ class _DashBoardPageState extends State<DashBoardPage> {
             child: Column(
               children: [
                 Expanded(
-                    flex: 1,child: ActivityFeed(dashboardMenu: dashboardMenu)),
+                    flex: 1, child: ActivityFeed(dashboardMenu: dashboardMenu)),
                 Expanded(
-                   
                   child: Container(
-                      color: Colors.red, child: MyGoals(goalList: goalList)),
+                      color: Colors.white, child: MyGoals(goalList: goalList)),
                 ),
                 Expanded(
-                   
                   child: Container(
                       color: Colors.white, child: const DailyActivity()),
                 ),
                 Expanded(
-                  
                   child:
                       Container(color: Colors.white, child: const Trainees()),
                 ),

@@ -1,4 +1,5 @@
 import 'package:fitness_web_app/pages/menu_drawer.dart';
+import 'package:fitness_web_app/widgets/header_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -19,39 +20,30 @@ class _DailyActivityState extends State<DailyActivity> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      endDrawer: const MenuDrawer(),
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: false,
-        title: const Text(
-          "Daily activity",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: Container(
+    return SingleChildScrollView(
+      child: Container(
         decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    // Explode the segments on tap
-                    explode: true,
-                    explodeIndex: 1)
-              ])
-            ]),
+        child: Column(
+          children: [
+            const HeaderUI(title: "Daily Activity"),
+            Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SfCircularChart(series: <CircularSeries>[
+                    DoughnutSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        // Explode the segments on tap
+                        explode: true,
+                        explodeIndex: 1)
+                  ])
+                ]),
+          ],
+        ),
       ),
     );
   }
