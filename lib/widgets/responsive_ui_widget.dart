@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
 
-class ResponsiveUIWidget extends StatelessWidget {
-  final Widget largeScreen;
-  final Widget? mediumScreen;
-  final Widget? smallScreen;
+class ResponsiveUIWidget {
+  MediaQueryData? query;
 
-  const ResponsiveUIWidget({
-    Key? key,
-    required this.largeScreen,
-    this.mediumScreen,
-    this.smallScreen,
-  }) : super(key: key);
-
-  static bool isSmallScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width < 800;
+  static ResponsiveUIWidget of(BuildContext context) {
+    ResponsiveUIWidget breakPoint = ResponsiveUIWidget()
+      ..query = MediaQuery.of(context);
+    return breakPoint;
   }
 
-  static bool isLargeScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width > 1200;
+  RenderPlatform get platform {
+    if (query!.size.width < 600) {
+      return RenderPlatform.MOBILE;
+    } else if (query!.size.width < 940) {
+      return RenderPlatform.TABLET;
+    }
+    return RenderPlatform.DESKTOP;
   }
 
-  static bool isMediumScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width >= 800 &&
-        MediaQuery.of(context).size.width <= 1200;
+  double get width {
+    return query?.size.width ?? 0;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1200) {
-          return largeScreen;
-        } else if (constraints.maxWidth <= 1200 &&
-            constraints.maxWidth >= 800) {
-          return mediumScreen ?? largeScreen;
-        } else {
-          return smallScreen ?? largeScreen;
-        }
-      },
-    );
+  double get height {
+    return query?.size.height ?? 0;
   }
+}
+
+enum RenderPlatform {
+  DESKTOP,
+  TABLET,
+  MOBILE,
 }

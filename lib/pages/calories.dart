@@ -77,6 +77,7 @@ class _CaloriesState extends State<Calories> {
                     subtitle: caloryList[index].subtitle,
                     title: caloryList[index].title,
                     clickIcon: caloryList[index].clickIcon,
+                    isImageTypeSVG: false,
                   );
                 },
               ),

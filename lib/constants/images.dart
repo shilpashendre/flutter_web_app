@@ -25,4 +25,5 @@ class Images {
   static const String pngArrow = "assets/images/png/arrow.png";
   static const String pngChat = "assets/images/png/chat.png";
   static const String pngSearch = "assets/images/png/search.png";
+  static const String pngNav = "assets/images/png/nav_img.png";
 }

@@ -134,6 +134,12 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "responsive_framework",
+      "rootUri": "file:///Users/shilpas/Desktop/flutterSDK/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/shilpas/Desktop/flutterSDK/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -206,7 +212,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-08-28T13:46:17.871474Z",
+  "generated": "2022-08-28T17:35:42.837257Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }

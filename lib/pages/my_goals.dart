@@ -1,7 +1,6 @@
 import 'package:fitness_web_app/constants/app_colors.dart';
 import 'package:fitness_web_app/constants/images.dart';
-import 'package:fitness_web_app/models/goal_data.dart';
-import 'package:fitness_web_app/pages/menu_drawer.dart';
+import 'package:fitness_web_app/models/goal_data.dart'; 
 import 'package:fitness_web_app/widgets/header_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -66,14 +65,14 @@ class _MyGoalsState extends State<MyGoals> {
                                           style: const TextStyle(
                                             color: Color(0xFFA6A6A6),
                                             fontSize: 14,
-                                          ),
+                                          )
                                         )
                                       ],
-                                    ),
+                                    )
                                   )
                                 ],
-                              ),
-                            ),
+                              )
+                            )
                           ))),
                   Positioned(
                       child: Padding(
@@ -88,7 +87,7 @@ class _MyGoalsState extends State<MyGoals> {
                                     spreadRadius: 5,
                                     blurRadius: 7,
                                     offset: const Offset(
-                                        0, 3), // changes position of shadow
+                                        0, 3),  
                                   ),
                                 ],
                                 color: Colors.white,
