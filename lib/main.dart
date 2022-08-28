@@ -4,7 +4,7 @@ import 'package:fitness_web_app/pages/menu_drawer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyApp()));
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchTextController = TextEditingController(text: "");
+
     return Scaffold(
         backgroundColor: scafoldBgColor,
         appBar: AppBar(
@@ -23,6 +25,20 @@ class MyApp extends StatelessWidget {
             "Dashboard menu",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
+          actions: [
+            SizedBox(
+              height: 20,
+              width: 100,
+              child: TextFormField(
+                controller: searchTextController,
+                decoration: const InputDecoration(
+                  hintText: "Search",
+                  hintStyle: TextStyle(color: Colors.black),
+                
+                ),
+              ),
+            )
+          ],
         ),
         drawer: const MenuDrawer(),
         body: const DashBoardPage());

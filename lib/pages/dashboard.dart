@@ -62,22 +62,23 @@ class _DashBoardPageState extends State<DashBoardPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            flex: 4,
+            flex: 7,
             child: Column(
               children: [
-                Expanded(child: ActivityFeed(dashboardMenu: dashboardMenu)),
                 Expanded(
-                  flex: 2,
+                    flex: 1,child: ActivityFeed(dashboardMenu: dashboardMenu)),
+                Expanded(
+                   
                   child: Container(
                       color: Colors.red, child: MyGoals(goalList: goalList)),
                 ),
                 Expanded(
-                  flex: 2,
+                   
                   child: Container(
                       color: Colors.white, child: const DailyActivity()),
                 ),
                 Expanded(
-                  flex: 2,
+                  
                   child:
                       Container(color: Colors.white, child: const Trainees()),
                 ),
