@@ -39,8 +39,8 @@ class HeaderUI extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(10))),
             child: Padding(
               padding: const EdgeInsets.all(2.0),
-              child: SvgPicture.asset(
-                Images.svgGoals,
+              child: Image.asset(
+                Images.pngMenu,
               ),
             ),
           ),

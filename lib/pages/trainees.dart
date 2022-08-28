@@ -1,6 +1,5 @@
 import 'package:fitness_web_app/constants/images.dart';
 import 'package:fitness_web_app/models/row_item_model.dart';
-import 'package:fitness_web_app/pages/menu_drawer.dart';
 import 'package:fitness_web_app/widgets/header_ui.dart';
 import 'package:fitness_web_app/widgets/row_item.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +14,13 @@ class Trainees extends StatefulWidget {
 class _TraineesState extends State<Trainees> {
   List<RowItemModel> traineeList = [
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngChat,
         imagePath: Images.svgCoach1,
         subtitle: "Wrestling Coach",
         title: "Dwayne Johnson",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngChat,
         imagePath: Images.svgCoach1,
         subtitle: "Boxing Coach",
         title: "Mike Tyson",
@@ -43,10 +42,12 @@ class _TraineesState extends State<Trainees> {
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   return RowItem(
-                      imagePath: traineeList[index].imagePath,
-                      subtitle: traineeList[index].subtitle,
-                      title: traineeList[index].title,
-                      displayMsgIcon: traineeList[index].displayMsgIcon);
+                    imagePath: traineeList[index].imagePath,
+                    subtitle: traineeList[index].subtitle,
+                    title: traineeList[index].title,
+                    clickIcon: traineeList[index].clickIcon,
+                    isImageTypeSVG: false,
+                  );
                 },
               ),
             ],

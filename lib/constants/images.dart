@@ -8,7 +8,6 @@ class Images {
   static const String svgWorkout = "assets/images/svg/workout.svg";
   static const String svgCoach1 = "assets/images/svg/coach1.svg";
 
-
   static const String apple = "assets/images/svg/apple.svg";
   static const String banana = "assets/images/svg/banana.svg";
   static const String apricot = "assets/images/svg/apricot.svg";
@@ -17,10 +16,12 @@ class Images {
   static const String strawberry = "assets/images/svg/strawberry.svg";
   static const String grapes = "assets/images/svg/grapes.svg";
 
-
   // dashboard
   static const String pngRunning = "assets/images/svg/running.png";
   static const String pngWalking = "assets/images/svg/walking.png";
   static const String pngHeartrate = "assets/images/svg/heartrate.png";
   static const String pngGoal = "assets/images/svg/goal.png";
+  static const String pngMenu = "assets/images/svg/menu.png";
+  static const String pngArrow = "assets/images/svg/arrow.png";
+  static const String pngChat = "assets/images/svg/chat.png";
 }

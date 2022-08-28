@@ -6,13 +6,15 @@ class RowItem extends StatefulWidget {
   final String title;
   final String subtitle;
   final String imagePath;
-  final bool displayMsgIcon;
+  final String clickIcon;
+  final bool isImageTypeSVG;
   const RowItem(
       {Key? key,
       required this.imagePath,
       required this.subtitle,
       required this.title,
-      required this.displayMsgIcon})
+      required this.clickIcon,
+      this.isImageTypeSVG = true})
       : super(key: key);
 
   @override
@@ -49,7 +51,7 @@ class _RowItemState extends State<RowItem> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SvgPicture.asset(
-                     widget.imagePath,
+                      widget.imagePath,
                     ),
                   ),
                 ),
@@ -76,7 +78,13 @@ class _RowItemState extends State<RowItem> {
                 ),
               ],
             ),
-            SvgPicture.asset(Images.svgGoals)
+            widget.isImageTypeSVG
+                ? SvgPicture.asset(widget.clickIcon)
+                : Image.asset(
+                    widget.clickIcon,
+                    height: 30,
+                    width: 30,
+                  )
           ]),
     );
   }

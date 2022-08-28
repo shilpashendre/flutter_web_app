@@ -16,43 +16,43 @@ class Calories extends StatefulWidget {
 class _CaloriesState extends State<Calories> {
   List<RowItemModel> caloryList = [
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.apple,
         subtitle: "Calories: 45",
         title: "Apple",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.banana,
         subtitle: "Calories: 80",
         title: "Banana",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.apricot,
         subtitle: "Calories: 17",
         title: "Apricot",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.blueberries,
         subtitle: "Calories: 51",
         title: "Blueberries",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.carrot,
         subtitle: "Calories: 78",
         title: "Carrot",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.strawberry,
         subtitle: "Calories: 37",
         title: "Strawberry",
         displayMsgIcon: true),
     RowItemModel(
-        clickIcon: Images.svgGoals,
+        clickIcon: Images.pngArrow,
         imagePath: Images.grapes,
         subtitle: "Calories: 66",
         title: "Grapes",
@@ -73,10 +73,11 @@ class _CaloriesState extends State<Calories> {
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return RowItem(
-                    imagePath: caloryList[index].imagePath,
-                    subtitle: caloryList[index].subtitle,
-                    title: caloryList[index].title,
-                    displayMsgIcon: caloryList[index].displayMsgIcon);
+                  imagePath: caloryList[index].imagePath,
+                  subtitle: caloryList[index].subtitle,
+                  title: caloryList[index].title,
+                  clickIcon: caloryList[index].clickIcon,
+                );
               },
             ),
           ],
