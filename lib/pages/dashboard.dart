@@ -3,6 +3,7 @@ import 'package:fitness_web_app/models/dash_board_header_menu.dart';
 import 'package:fitness_web_app/models/goal_data.dart';
 import 'package:fitness_web_app/pages/calories.dart';
 import 'package:fitness_web_app/pages/daily_activity.dart';
+import 'package:fitness_web_app/pages/heart_rate.dart';
 import 'package:fitness_web_app/pages/my_goals.dart';
 import 'package:fitness_web_app/pages/trainees.dart';
 import 'package:fitness_web_app/widgets/activity_feed.dart';
@@ -71,9 +72,14 @@ class _DashBoardPageState extends State<DashBoardPage> {
           ],
         ),
       ),
-      const Expanded(
+      Expanded(
         flex: 2,
-        child: Calories(),
+        child: Column(
+          children: const [
+            HeartRate(),
+            Calories(),
+          ],
+        ),
       ),
     ]);
   }
