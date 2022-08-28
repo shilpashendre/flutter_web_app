@@ -17,11 +17,12 @@ class Images {
   static const String grapes = "assets/images/svg/grapes.svg";
 
   // dashboard
-  static const String pngRunning = "assets/images/svg/running.png";
-  static const String pngWalking = "assets/images/svg/walking.png";
-  static const String pngHeartrate = "assets/images/svg/heartrate.png";
-  static const String pngGoal = "assets/images/svg/goal.png";
-  static const String pngMenu = "assets/images/svg/menu.png";
-  static const String pngArrow = "assets/images/svg/arrow.png";
-  static const String pngChat = "assets/images/svg/chat.png";
+  static const String pngRunning = "assets/images/png/running.png";
+  static const String pngWalking = "assets/images/png/walking.png";
+  static const String pngHeartrate = "assets/images/png/heartrate.png";
+  static const String pngGoal = "assets/images/png/goal.png";
+  static const String pngMenu = "assets/images/png/menu.png";
+  static const String pngArrow = "assets/images/png/arrow.png";
+  static const String pngChat = "assets/images/png/chat.png";
+  static const String pngSearch = "assets/images/png/search.png";
 }

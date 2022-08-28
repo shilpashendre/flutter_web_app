@@ -1,4 +1,4 @@
-2022/08/28-10:39:04.737 12f03 Reusing MANIFEST /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.a4fWbq/flutter_tools_chrome_device.HG4OVx/Default/Service Worker/Database/MANIFEST-000001
-2022/08/28-10:39:04.737 12f03 Recovering log #3
-2022/08/28-10:39:04.737 12f03 (ignoring error) /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.a4fWbq/flutter_tools_chrome_device.HG4OVx/Default/Service Worker/Database/000003.log: dropping 8491 bytes; Corruption: checksum mismatch
-2022/08/28-10:39:04.737 12f03 Reusing old log /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.a4fWbq/flutter_tools_chrome_device.HG4OVx/Default/Service Worker/Database/000003.log 
+2022/08/28-19:11:43.564 ea03 Reusing MANIFEST /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/MANIFEST-000001
+2022/08/28-19:11:43.606 ea03 Recovering log #3
+2022/08/28-19:11:43.606 ea03 (ignoring error) /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/000003.log: dropping 17248 bytes; Corruption: checksum mismatch
+2022/08/28-19:11:43.608 ea03 Reusing old log /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/000003.log 

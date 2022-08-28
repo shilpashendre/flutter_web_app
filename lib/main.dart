@@ -54,7 +54,11 @@ class MyApp extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(10))),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: SvgPicture.asset(Images.svgGoals),
+                              child: Image.asset(
+                                Images.pngSearch,
+                                height: 20,
+                                width: 20,
+                              ),
                             )),
                       ),
                     ),
