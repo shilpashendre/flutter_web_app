@@ -1,4 +1,5 @@
-2022/08/28-19:11:43.564 ea03 Reusing MANIFEST /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/MANIFEST-000001
-2022/08/28-19:11:43.606 ea03 Recovering log #3
-2022/08/28-19:11:43.606 ea03 (ignoring error) /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/000003.log: dropping 17248 bytes; Corruption: checksum mismatch
-2022/08/28-19:11:43.608 ea03 Reusing old log /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.W1226k/flutter_tools_chrome_device.V3uXQ3/Default/Service Worker/Database/000003.log 
+2022/08/28-19:44:06.730 6c07 Reusing MANIFEST /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.5P14bz/flutter_tools_chrome_device.YFUhzA/Default/Service Worker/Database/MANIFEST-000001
+2022/08/28-19:44:06.741 6c07 Recovering log #3
+2022/08/28-19:44:06.751 6c07 (ignoring error) /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.5P14bz/flutter_tools_chrome_device.YFUhzA/Default/Service Worker/Database/000003.log: dropping 20719 bytes; Corruption: checksum mismatch
+2022/08/28-19:44:06.751 6c07 (ignoring error) /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.5P14bz/flutter_tools_chrome_device.YFUhzA/Default/Service Worker/Database/000003.log: dropping 7 bytes; Corruption: missing start of fragmented record(2)
+2022/08/28-19:44:06.752 6c07 Reusing old log /private/var/folders/nd/zvtf10hn1735vyc31ymssbcm0000gn/T/flutter_tools.5P14bz/flutter_tools_chrome_device.YFUhzA/Default/Service Worker/Database/000003.log 

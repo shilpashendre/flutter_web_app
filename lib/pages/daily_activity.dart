@@ -20,7 +20,8 @@ class _DailyActivityState extends State<DailyActivity> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: const BoxDecoration(
             color: Colors.white,

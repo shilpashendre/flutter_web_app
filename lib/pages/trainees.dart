@@ -28,7 +28,8 @@ class _TraineesState extends State<Trainees> {
   ];
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
       child: Container(
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(

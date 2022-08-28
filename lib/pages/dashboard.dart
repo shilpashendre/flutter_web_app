@@ -68,17 +68,15 @@ class _DashBoardPageState extends State<DashBoardPage> {
                 SizedBox(
                     height: 150,
                     child: ActivityFeed(dashboardMenu: dashboardMenu)),
-                Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: MyGoals(goalList: goalList)),
-                Container(color: Colors.white, child: const DailyActivity()),
-                Container(color: Colors.white, child: const Trainees()),
+                MyGoals(goalList: goalList),
+                const DailyActivity(),
+                const Trainees(),
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 2,
-            child: Container(color: Colors.white, child: const Calories()),
+            child: Calories(),
           )
         ]);
   }
