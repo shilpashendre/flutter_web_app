@@ -18,7 +18,10 @@ class MyGoals extends StatefulWidget {
 class _MyGoalsState extends State<MyGoals> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Container(
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Column(children: [
         const HeaderUI(title: "My Goals"),
         ListView.builder(

@@ -62,36 +62,23 @@ class _DashBoardPageState extends State<DashBoardPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            flex: 7,
+            flex: 4,
             child: Column(
               children: [
-                Expanded(
-                    flex: 1, child: ActivityFeed(dashboardMenu: dashboardMenu)),
-                Expanded(
-                  child: Container(
-                      color: Colors.white, child: MyGoals(goalList: goalList)),
-                ),
-                Expanded(
-                  child: Container(
-                      color: Colors.white, child: const DailyActivity()),
-                ),
-                Expanded(
-                  child:
-                      Container(color: Colors.white, child: const Trainees()),
-                ),
+                SizedBox(
+                    height: 150,
+                    child: ActivityFeed(dashboardMenu: dashboardMenu)),
+                Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: MyGoals(goalList: goalList)),
+                Container(color: Colors.white, child: const DailyActivity()),
+                Container(color: Colors.white, child: const Trainees()),
               ],
             ),
           ),
           Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                Expanded(
-                    flex: 1,
-                    child: Container(
-                        color: Colors.white, child: const Calories())),
-              ],
-            ),
+            child: Container(color: Colors.white, child: const Calories()),
           )
         ]);
   }
