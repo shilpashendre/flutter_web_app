@@ -57,27 +57,24 @@ class _DashBoardPageState extends State<DashBoardPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            flex: 4,
-            child: Column(
-              children: [
-                SizedBox(
-                    height: 150,
-                    child: ActivityFeed(dashboardMenu: dashboardMenu)),
-                MyGoals(goalList: goalList),
-                const DailyActivity(),
-                const Trainees(),
-              ],
-            ),
-          ),
-          const Expanded(
-            flex: 2,
-            child: Calories(),
-          )
-        ]);
+    return Row(mainAxisSize: MainAxisSize.min, children: [
+      Expanded(
+        flex: 4,
+        child: Column(
+          children: [
+            SizedBox(
+                height: 150, child: ActivityFeed(dashboardMenu: dashboardMenu)),
+            MyGoals(goalList: goalList),
+            const DailyActivity(),
+            const Trainees(),
+            const SizedBox(height: 20)
+          ],
+        ),
+      ),
+      const Expanded(
+        flex: 2,
+        child: Calories(),
+      ),
+    ]);
   }
 }

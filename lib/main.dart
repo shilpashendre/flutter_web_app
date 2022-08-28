@@ -104,6 +104,6 @@ class MyApp extends StatelessWidget {
           ],
         ),
         drawer: const MenuDrawer(),
-        body: const DashBoardPage());
+        body: const SingleChildScrollView(child: DashBoardPage()));
   }
 }
