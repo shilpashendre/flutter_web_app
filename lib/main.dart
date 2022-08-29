@@ -2,11 +2,33 @@ import 'package:fitness_web_app/constants/app_colors.dart';
 import 'package:fitness_web_app/constants/images.dart';
 import 'package:fitness_web_app/pages/dashboard.dart';
 import 'package:fitness_web_app/pages/menu_drawer.dart';
+import 'package:fitness_web_app/widgets/responsive_ui_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+    builder: (context, widget) => ResponsiveWrapper.builder(
+      BouncingScrollWrapper.builder(context, widget!),
+      defaultScale: true,
+      breakpoints: [
+        const ResponsiveBreakpoint.resize(450, name: MOBILE),
+        const ResponsiveBreakpoint.autoScaleDown(800, name: TABLET),
+        const ResponsiveBreakpoint.resize(1280,
+            name: DESKTOP, scaleFactor: .87),
+        const ResponsiveBreakpoint.autoScale(1550,
+            name: "4K", scaleFactor: 1.08),
+        const ResponsiveBreakpoint.autoScale(2300,
+            name: "8K", scaleFactor: 1.3),
+      ],
+      background: Container(
+        color: Colors.white,
+      ),
+    ),
+  ));
 }
 
 // ignore: must_be_immutable
@@ -94,7 +116,10 @@ class MyApp extends StatelessWidget {
     return Scaffold(
         backgroundColor: scafoldBgColor,
         appBar: AppBar(
-          iconTheme: const IconThemeData(color: Colors.black),
+          iconTheme:
+              ResponsiveUIWidget.of(context).platform != RenderPlatform.DESKTOP
+                  ? const IconThemeData(color: Colors.black)
+                  : null,
           backgroundColor: scafoldBgColor,
           elevation: 0,
           centerTitle: false,
